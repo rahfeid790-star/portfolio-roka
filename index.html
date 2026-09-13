@@ -1,0 +1,1184 @@
+
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <title>Rahf | Full-Stack Software Engineer & Creative Technologist</title>
+  <meta name="description" content="Personal portfolio of Rahf — Full-Stack Software Engineer, Creative Technologist, and UI/UX Designer crafting intelligent, scalable, and immersive digital web experiences.">
+  <meta name="keywords" content="Rahf, Software Engineer, Full Stack Developer, Creative Technologist, UI/UX Designer, AI Solutions, React, Next.js, TypeScript, Riyadh, Portfolio">
+  <meta name="author" content="Rahf">
+  
+  <!-- OpenGraph / Twitter Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rahf | Full-Stack Software Engineer & Creative Technologist">
+  <meta property="og:description" content="Crafting immersive digital experiences where software architecture meets fluid aesthetic design.">
+  <meta property="og:image" content="assets/images/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, IBM Plex Sans Arabic, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core & Component Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="ambient-decorations" aria-hidden="true">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+
+  <!-- Interactive Smooth Mouse Glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        
+        <!-- Brand Monogram -->
+        <a href="#hero" class="brand-logo" aria-label="Rahf Portfolio Home">
+          <div class="brand-icon">R</div>
+          <span class="brand-text">Rahf</span>
+          <span class="brand-badge">DEV</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#journey" class="nav-link" data-i18n="nav_journey">Journey</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">Reviews</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+        <!-- Action Controls -->
+        <div class="nav-actions">
+          
+          <!-- Command Palette Trigger Button -->
+          <button class="cmd-k-btn cmd-k-trigger" title="Open Quick Command Palette (Cmd + K)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span style="font-size: 0.75rem;">Search</span>
+            <span class="kbd-badge">⌘K</span>
+          </button>
+
+          <!-- Language Switcher (EN / العربية) -->
+          <button class="icon-btn" id="lang-toggle-btn" title="Toggle Language (العربية / English)" aria-label="Switch Language" style="width: auto; padding: 0 0.85rem; font-size: 0.8rem; font-weight: 600;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>العربية</span>
+          </button>
+
+          <!-- Audio Sound Effects Toggle -->
+          <button class="icon-btn" id="sound-toggle-btn" title="Toggle Sound Effects" aria-label="Sound Toggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+
+          <!-- Resume Modal Trigger -->
+          <button class="btn btn-secondary btn-sm resume-trigger" data-i18n="nav_resume">
+            Resume
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Mobile Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- ====================================================================
+         1. profile Section
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Interactive Constellation Particles Canvas -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column: Narrative & Actions -->
+          <div class="hero-content-col reveal-on-scroll">
+            
+            <!-- Availability Indicator Badge -->
+            <div class="status-indicator-badge">
+              <span class="status-dot"></span>
+              <span data-i18n="hero_status">Available for New Projects & Roles</span>
+            </div>
+
+            <!-- Hero Main Typography -->
+            <h1 class="hero-title">
+              <span data-i18n="hero_greeting">Hi, I'm</span>
+              <span class="hero-name-gradient" data-i18n="hero_name">Rahf</span>
+              <span class="hero-role-wrapper">
+                <span class="role-typing" id="role-typing-target">Full-Stack Software Engineer</span>
+              </span>
+            </h1>
+
+            <!-- Narrative Subtitle -->
+            <p class="hero-bio" data-i18n="hero_bio">
+              A passionate Full-Stack Engineer and Creative Technologist building intelligent, high-impact digital experiences where rigorous software architecture meets fluid aesthetic design.
+            </p>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_projects">
+                Explore Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="hero_cta_contact">
+                Get in Touch
+              </a>
+              <button class="btn btn-secondary resume-trigger" data-i18n="hero_cta_cv">
+                View Resume
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Column: Floating Avatar Showcase Card -->
+          <div class="hero-visual-col reveal-on-scroll delay-1">
+            <div class="hero-visual-card">
+              <img src="assets/profile.jpeg" alt="Rahf Profile Picture" style="width: 220px; height: 220px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px auto; border: 4px solid #ffffff; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+              
+              <!-- Floating Orbital Tech Badges -->
+              <div class="orbit-chip chip-1">
+                <span>⚡</span>
+                <span>React & Next.js</span>
+              </div>
+              <div class="orbit-chip chip-2">
+                <span>🧠</span>
+                <span>AI & LLM Orchestration</span>
+              </div>
+              <div class="orbit-chip chip-3">
+                <span>✨</span>
+                <span>Interactive UI/UX</span>
+              </div>
+
+              <!-- Stylized Avatar Artwork Container -->
+              <div class="avatar-wrapper">
+                <div class="avatar-svg-container" id="hero-avatar-target">
+                  <!-- Injected via projects.js -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Stats Ribbon -->
+        <div class="hero-stats-bar reveal-on-scroll delay-2">
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="5" data-suffix="+">5+</div>
+            <div class="stat-label" data-i18n="stat_exp_lbl">Industry Experience</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-count="35" data-suffix="+">35+</div>
+            <div class="stat-label" data-i18n="stat_proj_lbl">Shipped to Production</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-count="99" data-suffix=".8%">99.8%</div>
+            <div class="stat-label" data-i18n="stat_clients_lbl">Client Satisfaction</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-count="14" data-suffix="+">14+</div>
+            <div class="stat-label" data-i18n="stat_awards_lbl">Hackathons & Honors</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. About Section
+         ==================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="about_tag">Biography & Approach</div>
+          <h2 class="section-title" data-i18n="about_title">Engineering Precision Meets Intuitive Aesthetics</h2>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Narrative Story -->
+          <div class="about-story reveal-on-scroll">
+            <p data-i18n="about_p1">
+              I am <strong>Rahf</strong>, a creative technologist and full-stack software engineer based in Riyadh, working with innovative global brands and ambitious tech teams. I bridge the divide between complex distributed systems and refined, responsive user interfaces.
+            </p>
+            <p data-i18n="about_p2">
+              My philosophy is rooted in <strong>holistic digital craftsmanship</strong>: code should be as scalable, performant, and resilient under the hood as the final interface feels delightful and effortless to the human on the other side.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+              <div class="pill pill-primary">📍 Based in Riyadh, Saudi Arabia</div>
+              <div class="pill pill-cyan">🌍 Available Worldwide (Remote)</div>
+              <div class="pill">⚡ Fast Iteration & Clean Code</div>
+            </div>
+          </div>
+
+          <!-- Philosophy Pillars -->
+          <div class="about-cards-col reveal-on-scroll delay-1">
+            
+            <div class="pillar-card">
+              <div class="pillar-icon">💎</div>
+              <h3 class="pillar-title" data-i18n="pillar1_title">Pixel-Perfect Craft</h3>
+              <p class="pillar-desc" data-i18n="pillar1_desc">Meticulous attention to micro-interactions, responsive fluidity, typography, and modern accessibility standards.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">⚙️</div>
+              <h3 class="pillar-title" data-i18n="pillar2_title">Scalable Systems</h3>
+              <p class="pillar-desc" data-i18n="pillar2_desc">Architecting robust backend pipelines, microservices, and databases capable of effortlessly handling peak loads.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">🔮</div>
+              <h3 class="pillar-title" data-i18n="pillar3_title">AI & Spatial Tech</h3>
+              <p class="pillar-desc" data-i18n="pillar3_desc">Integrating state-of-the-art LLMs, neural workflows, and interactive 3D WebGL visualizations.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">📈</div>
+              <h3 class="pillar-title" data-i18n="pillar4_title">Product Strategy</h3>
+              <p class="pillar-desc" data-i18n="pillar4_desc">Aligning technical roadmaps with measurable business outcomes and delightful user retention metrics.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. Selected Projects Showcase Section
+         ==================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="proj_tag">Selected Portfolio</div>
+          <h2 class="section-title" data-i18n="proj_title">Featured Works & Digital Inventions</h2>
+          <p class="section-subtitle" data-i18n="proj_subtitle">A curated showcase of full-stack platforms, AI applications, fintech solutions, and design systems.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="projects-filter-bar reveal-on-scroll">
+          <button class="filter-tab active" data-filter="all" data-i18n="filter_all">All Works</button>
+          <button class="filter-tab" data-filter="fullstack" data-i18n="filter_fullstack">Full-Stack</button>
+          <button class="filter-tab" data-filter="design" data-i18n="filter_design">UI/UX & Design</button>
+          <button class="filter-tab" data-filter="ai" data-i18n="filter_ai">AI & Creative Tech</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: NovaCore AI -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack ai">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="novacore"></div>
+              <span class="project-overlay-badge">AI / Orchestrator</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">NovaCore AI Platform</h3>
+              <p class="project-desc">Autonomous multi-agent orchestration suite with dynamic RAG retrieval, neural token visualization, and sub-100ms LLM streaming execution.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Python FastAPI</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">pgvector</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="novacore" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Zenith Wealth FinTech -->
+          <article class="project-card reveal-on-scroll delay-1" data-category="fullstack design">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="zenith"></div>
+              <span class="project-overlay-badge">FinTech & Web3</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Zenith Wealth Management</h3>
+              <p class="project-desc">Luxury wealth management dashboard with real-time portfolio valuation curves, multi-asset crypto vaults, and biometric authorization flows.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Next.js 15</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Chart.js</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="zenith" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Aura Luxe Spatial E-Commerce -->
+          <article class="project-card reveal-on-scroll delay-2" data-category="design ai">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="auraluxe"></div>
+              <span class="project-overlay-badge">Spatial & E-Commerce</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Aura Maison d'Art</h3>
+              <p class="project-desc">Editorial spatial interiors showcase blending tactile brutalism with interactive 3D model orbiters, sound design, and headless Shopify checkout.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Vue 3</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">GSAP</span>
+                <span class="tech-tag">Shopify API</span>
+                <span class="tech-tag">WebGL</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="auraluxe" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: PulseOps Telemetry -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="pulseops"></div>
+              <span class="project-overlay-badge">DevOps & Telemetry</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">PulseOps Infrastructure Monitor</h3>
+              <p class="project-desc">Real-time distributed tracing and Kubernetes telemetry visualizer processing 50,000+ RPS with live logs and anomaly alerts.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Go</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">ClickHouse</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">WebSockets</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="pulseops" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Mirage Studio -->
+          <article class="project-card reveal-on-scroll delay-1" data-category="ai design">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="mirage"></div>
+              <span class="project-overlay-badge">Creative Audio / WebGL</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Mirage Spatial Synthesizer</h3>
+              <p class="project-desc">Experimental 3D binaural sound sculptor and geometric synthesizer running on WebGL shaders and pure native Web Audio API DSP nodes.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Web Audio API</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">GLSL Shaders</span>
+                <span class="tech-tag">Canvas 2D</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="mirage" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Noor Health Portal -->
+          <article class="project-card reveal-on-scroll delay-2" data-category="fullstack design">
+            <div class="project-media-viewport">
+              <div class="project-svg-art" data-art-target="noorhealth"></div>
+              <span class="project-overlay-badge">HealthTech & UX</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Noor Health Intelligence</h3>
+              <p class="project-desc">Patient-first digital health portal with HIPAA-compliant encrypted video consultations, real-time vitals monitoring, and AI diagnostic summaries.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">WebRTC</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
+              <div class="project-actions">
+                <button class="view-case-study-btn" data-project="noorhealth" data-i18n="btn_case_study">
+                  View Case Study →
+                </button>
+                <div class="project-links-group">
+                  <a href="#contact" class="pill pill-primary" data-i18n="btn_live_demo">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. Skills & Tech Stack Section
+         ==================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="skills_tag">Technical Mastery</div>
+          <h2 class="section-title" data-i18n="skills_title">Skills & Architecture Stack</h2>
+          <p class="section-subtitle" data-i18n="skills_subtitle">Modern frameworks, distributed backends, and creative toolkits I leverage daily.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Frontend Architecture -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon">⚡</div>
+              <h3 class="category-title" data-i18n="cat_frontend">Frontend Architecture</h3>
+            </div>
+            <div class="skill-bars-list">
+              
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">React & Next.js 15</span>
+                  <span class="skill-percent">96%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="96%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">TypeScript & Modern ES+</span>
+                  <span class="skill-percent">94%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="94%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Modern CSS & Tailwind</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="95%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Three.js & WebGL / Canvas</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="88%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Cloud -->
+          <div class="skill-category-card reveal-on-scroll delay-1">
+            <div class="category-header">
+              <div class="category-icon">🛡️</div>
+              <h3 class="category-title" data-i18n="cat_backend">Backend & Cloud</h3>
+            </div>
+            <div class="skill-bars-list">
+              
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js & Express</span>
+                  <span class="skill-percent">94%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="94%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python & FastAPI</span>
+                  <span class="skill-percent">91%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="91%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL, Redis & Prisma</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="92%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker & Kubernetes / CI/CD</span>
+                  <span class="skill-percent">86%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="86%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 3: UI/UX & Design Systems -->
+          <div class="skill-category-card reveal-on-scroll delay-2">
+            <div class="category-header">
+              <div class="category-icon">🎨</div>
+              <h3 class="category-title" data-i18n="cat_design">UI/UX & Prototyping</h3>
+            </div>
+            <div class="skill-bars-list">
+              
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Figma Design Systems & Tokens</span>
+                  <span class="skill-percent">96%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="96%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Interactive Micro-Animations</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="95%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">WCAG Accessibility & Usability</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="92%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Rapid Interactive Prototyping</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="90%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 4: AI & Data Engineering -->
+          <div class="skill-category-card reveal-on-scroll delay-3">
+            <div class="category-header">
+              <div class="category-icon">🧠</div>
+              <h3 class="category-title" data-i18n="cat_ai">AI & Data Engineering</h3>
+            </div>
+            <div class="skill-bars-list">
+              
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">LLM Pipelines & LangChain</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="92%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Vector Stores (Pinecone, pgvector)</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">WebSockets & Event Streaming</span>
+                  <span class="skill-percent">89%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="89%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-info">
+                  <span class="skill-name">Data Visualization (D3, Charts)</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-percent="88%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tool Marquee / Chips Grid -->
+        <div class="tools-marquee-card reveal-on-scroll">
+          <h4 style="font-size: 1rem; color: var(--text-secondary);" data-i18n="tools_title">Platforms & Tools I Frequently Use</h4>
+          <div class="tools-grid">
+            <div class="tool-chip"><span>⚛️</span> React.js</div>
+            <div class="tool-chip"><span>▲</span> Next.js</div>
+            <div class="tool-chip"><span>🔷</span> TypeScript</div>
+            <div class="tool-chip"><span>🐍</span> Python</div>
+            <div class="tool-chip"><span>🐘</span> PostgreSQL</div>
+            <div class="tool-chip"><span>⚡</span> Redis</div>
+            <div class="tool-chip"><span>🐳</span> Docker</div>
+            <div class="tool-chip"><span>🎨</span> Figma</div>
+            <div class="tool-chip"><span>🌐</span> GraphQL</div>
+            <div class="tool-chip"><span>📦</span> Git & GitHub</div>
+            <div class="tool-chip"><span>☁️</span> AWS / GCP</div>
+            <div class="tool-chip"><span>🔊</span> Web Audio API</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. Journey & Experience Timeline
+         ==================================================================== -->
+    <section class="section" id="journey">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="journey_tag">Career Milestone</div>
+          <h2 class="section-title" data-i18n="journey_title">Experience & Milestones</h2>
+          <p class="section-subtitle" data-i18n="journey_subtitle">The journey from computer science honors to leading engineering and digital products.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track-line" aria-hidden="true"></div>
+
+          <!-- Timeline 1 -->
+          <div class="timeline-entry reveal-on-scroll">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">2024 — Present</span>
+              <h3 class="timeline-role">Senior Creative Technologist & Tech Lead</h3>
+              <div class="timeline-company">Studio Horizon • Riyadh / Remote</div>
+              <p class="timeline-desc">Leading full-stack engineering initiatives and creative technology projects. Architecting generative AI web tooling, 3D interactive experiences, and high-concurrency cloud microservices.</p>
+            </div>
+          </div>
+
+          <!-- Timeline 2 -->
+          <div class="timeline-entry reveal-on-scroll delay-1">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">2022 — 2024</span>
+              <h3 class="timeline-role">Lead Full-Stack Software Engineer</h3>
+              <div class="timeline-company">Apex Innovations</div>
+              <p class="timeline-desc">Spearheaded the development of FinTech and SaaS enterprise web applications. Scaled user onboarding flows by 240% while decreasing latency by 60% through optimized caching architectures.</p>
+            </div>
+          </div>
+
+          <!-- Timeline 3 -->
+          <div class="timeline-entry reveal-on-scroll delay-2">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">2020 — 2022</span>
+              <h3 class="timeline-role">UI/UX & Frontend Engineer</h3>
+              <div class="timeline-company">Digital Wave Labs</div>
+              <p class="timeline-desc">Designed and deployed multi-tenant web portals, design systems, and responsive customer-facing interfaces with strict WCAG compliance and smooth micro-interactions.</p>
+            </div>
+          </div>
+
+          <!-- Timeline 4 -->
+          <div class="timeline-entry reveal-on-scroll delay-3">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">2016 — 2020</span>
+              <h3 class="timeline-role">B.S. in Software Engineering</h3>
+              <div class="timeline-company">King Saud University (First Class Honors)</div>
+              <p class="timeline-desc">Graduated with top academic honors. Specialized in Distributed Computing, Human-Computer Interaction (HCI), and Software Architecture. Winner of National Tech Hackathons.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. Testimonials & Recommendations
+         ==================================================================== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="reviews_tag">Testimonials</div>
+          <h2 class="section-title" data-i18n="reviews_title">Endorsements & Recommendations</h2>
+          <p class="section-subtitle" data-i18n="reviews_subtitle">What founders, engineering directors, and collaborative partners say about working together.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Rahf possesses that ultra-rare balance: deep, rigorous software engineering capability paired with an extraordinary eye for aesthetic beauty. She single-handedly elevated our product's feel to enterprise tier."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">FA</div>
+              <div>
+                <div class="author-name">Faisal Al-Otaibi</div>
+                <div class="author-role">VP of Product • Apex Innovations</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Working alongside Rahf on our AI orchestrator was effortless. She solved complex vector caching issues while crafting an interface our users constantly rave about. A true 10x engineer."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">NE</div>
+              <div>
+                <div class="author-name">Noura El-Sayed</div>
+                <div class="author-role">Co-Founder & CTO • NovaCore AI</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "The 3D interactive web platform Rahf delivered for our interior collection stunned our global clientele and won industry design recognition. Speed, precision, and pure digital elegance."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JL</div>
+              <div>
+                <div class="author-name">Jean-Luc Laurent</div>
+                <div class="author-role">Creative Director • Aura Studio Paris</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. Contact & Collaboration Section
+         ==================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag" data-i18n="contact_tag">Connect With Me</div>
+          <h2 class="section-title" data-i18n="contact_title">Let's Build Something Extraordinary</h2>
+          <p class="section-subtitle" data-i18n="contact_subtitle">Have an ambitious product idea, freelance inquiry, or engineering role? Reach out today.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Left: Info & Fast Channels -->
+          <div class="contact-info-col reveal-on-scroll">
+            
+            <div class="contact-quick-card">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">Direct Communication</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                I respond swiftly to inquiries, consultation requests, and interesting technical ventures.
+              </p>
+
+              <div class="contact-methods-list">
+                
+                <!-- Email Item -->
+                <div class="contact-item">
+                  <div class="contact-meta">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                      <div class="contact-label" data-i18n="contact_email_lbl">Email Address</div>
+                      <div class="contact-value">rahaf.engineer@domain.com</div>
+                    </div>
+                  </div>
+                  <button class="copy-btn" data-copy-target="rahaf.engineer@domain.com" data-copy-msg="Email copied to clipboard!" data-i18n="btn_copy">Copy</button>
+                </div>
+
+                <!-- Phone / WhatsApp Item -->
+                <div class="contact-item">
+                  <div class="contact-meta">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                      <div class="contact-label" data-i18n="contact_phone_lbl">Phone / WhatsApp</div>
+                      <div class="contact-value">+966 50 000 0000</div>
+                    </div>
+                  </div>
+                  <button class="copy-btn" data-copy-target="+966500000000" data-copy-msg="Phone number copied!" data-i18n="btn_copy">Copy</button>
+                </div>
+
+                <!-- Location Item -->
+                <div class="contact-item">
+                  <div class="contact-meta">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                      <div class="contact-label" data-i18n="contact_loc_lbl">Location</div>
+                      <div class="contact-value" data-i18n="contact_loc_val">Riyadh, Saudi Arabia (Open to Global Remote)</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Quick Status Card -->
+              <div style="margin-top: 1.75rem; padding: 1.25rem; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 0.85rem; color: #34d399; margin-bottom: 0.25rem;">
+                  <span class="status-dot"></span>
+                  <span>Currently Welcoming New Inquiries</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">
+                  Accepting select high-impact freelance projects, technical advisory, and senior engineering roles.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Contact Right: Interactive Form -->
+          <div class="contact-form-card reveal-on-scroll delay-1">
+            <form class="contact-form" id="contact-form" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label" data-i18n="form_name_lbl">Your Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g., Sarah Al-Harbi" data-i18n-ph="form_name_ph" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label" data-i18n="form_email_lbl">Email Address</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="sarah@example.com" data-i18n-ph="form_email_ph" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-budget" class="form-label" data-i18n="form_budget_lbl">Estimated Budget / Project Scope</label>
+                <select id="contact-budget" class="form-select">
+                  <option value="" data-i18n="form_budget_opt1">Select Budget Scope...</option>
+                  <option value="5k-15k" data-i18n="form_budget_opt2">$5k – $15k (Prototype / MVP)</option>
+                  <option value="15k-35k" data-i18n="form_budget_opt3">$15k – $35k (Full Production App)</option>
+                  <option value="35k+" data-i18n="form_budget_opt4">$35k+ (Enterprise System)</option>
+                  <option value="role" data-i18n="form_budget_opt5">Full-Time / Contract Role</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label" data-i18n="form_msg_lbl">Project Details</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your product vision, timeline, and goals..." data-i18n-ph="form_msg_ph" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;" data-i18n="btn_submit_msg">
+                Send Message ⚡
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div class="brand-icon" style="width: 34px; height: 34px; font-size: 1rem;">R</div>
+          <div>
+            <div style="font-weight: 700; color: #ffffff;">Rahf • Full-Stack Engineer</div>
+            <div class="footer-copy" data-i18n="footer_rights">All rights reserved. Designed & Engineered with precision.</div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener" class="icon-btn" title="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="icon-btn" title="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <button class="icon-btn cmd-k-trigger" title="Open Command Palette (Cmd+K)">
+            ⌘K
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       Modals
+       ==================================================================== -->
+
+  <!-- 1. Case Study Deep Dive Modal -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="modal-project-cat" class="pill pill-cyan" style="margin-bottom: 0.4rem;">Category</span>
+          <h2 id="modal-project-title" style="font-size: 1.5rem; font-weight: 800; color: #ffffff;">Project Title</h2>
+        </div>
+        <button class="modal-close-btn" id="case-study-close-btn" aria-label="Close Case Study Modal">×</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Live Preview Artwork Container -->
+        <div id="modal-project-visual" style="width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; margin-bottom: 1.75rem; border: 1px solid var(--border-subtle);"></div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.75rem; padding: 1.25rem; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle);">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Year Completed</div>
+            <div id="modal-project-year" style="font-weight: 700; color: var(--text-primary);">2025</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Client / Entity</div>
+            <div id="modal-project-client" style="font-weight: 700; color: var(--text-primary);">Autonomous AI</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Role</div>
+            <div style="font-weight: 700; color: var(--accent-primary-light);">Lead Full-Stack Architect</div>
+          </div>
+        </div>
+
+        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Executive Summary</h4>
+        <p id="modal-project-summary" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;"></p>
+
+        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Technical Challenges & Solutions</h4>
+        <p id="modal-project-challenges" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;"></p>
+
+        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Architecture & Tech Stack</h4>
+        <p id="modal-project-arch" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;"></p>
+        <div id="modal-project-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem;"></div>
+
+        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Measurable Outcomes & Impact</h4>
+        <p id="modal-project-outcomes" style="font-size: 0.95rem; color: #34d399; line-height: 1.7; font-weight: 500;"></p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Resume / CV In-Browser Viewer Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-heading">
+    <div class="modal-dialog" style="max-width: 780px;">
+      <div class="modal-header">
+        <div>
+          <h2 id="resume-heading" style="font-size: 1.35rem; font-weight: 800; color: #ffffff;">Curriculum Vitae • Rahf</h2>
+          <span style="font-size: 0.8rem; color: var(--text-secondary);">Full-Stack Engineer & Creative Technologist</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="btn btn-secondary btn-sm" id="print-cv-btn">Print / PDF</button>
+          <button class="modal-close-btn" id="resume-close-btn" aria-label="Close Resume Modal">×</button>
+        </div>
+      </div>
+      <div class="modal-body" style="background: #0a0d16; padding: 2.5rem;">
+        
+        <!-- CV Header -->
+        <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.5rem; margin-bottom: 2rem;">
+          <h1 style="font-size: 2rem; font-weight: 900; color: #ffffff;">RAHF AL-MANSOOR</h1>
+          <div style="font-size: 1rem; color: var(--accent-cyan-light); font-weight: 600; margin-bottom: 0.75rem;">
+            Senior Full-Stack Engineer & Creative Technologist
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.85rem; color: var(--text-secondary);">
+            <span>📍 Riyadh, Saudi Arabia</span>
+            <span>✉️ rahaf.engineer@domain.com</span>
+            <span>🌐 github.com/rahaf-code</span>
+            <span>💼 linkedin.com/in/rahaf-engineer</span>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary-light); margin-bottom: 0.6rem;">Professional Summary</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+            Distinguished Software Engineer with 5+ years of experience architecting resilient cloud systems, cutting-edge AI integrations, and responsive high-performance web applications. Demonstrated track record leading cross-functional teams, reducing production latency, and winning national technology hackathons.
+          </p>
+        </div>
+
+        <!-- Core Competencies -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary-light); margin-bottom: 0.6rem;">Core Technical Stack</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7;">
+            <strong>Frontend:</strong> React, Next.js 15, TypeScript, Modern CSS, Three.js, WebGL, Tailwind, Web Audio API.<br>
+            <strong>Backend & Cloud:</strong> Node.js, Python (FastAPI), Go, PostgreSQL, Redis, Docker, Kubernetes, AWS, Kafka.<br>
+            <strong>AI & Systems:</strong> LangChain, pgvector, Vector Embeddings, LLM Agent Architectures, Microservices.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary-light); margin-bottom: 1rem;">Experience</h3>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff; font-size: 0.95rem;">
+              <span>Senior Creative Technologist & Tech Lead</span>
+              <span style="color: var(--accent-cyan-light);">2024 — Present</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.4rem;">Studio Horizon • Riyadh</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Architected enterprise autonomous agent workflows supporting 12M+ token operations.</li>
+              <li>Engineered 3D spatial web application featured in international design showcases.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff; font-size: 0.95rem;">
+              <span>Lead Full-Stack Software Engineer</span>
+              <span style="color: var(--accent-cyan-light);">2022 — 2024</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.4rem;">Apex Innovations</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Led engineering of institutional FinTech asset platform managing $140M+ in valuation.</li>
+              <li>Reduced API endpoint P99 latency by 60% through Redis distributed cluster caching.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary-light); margin-bottom: 0.6rem;">Education & Honors</h3>
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff; font-size: 0.95rem;">
+            <span>Bachelor of Science in Software Engineering</span>
+            <span style="color: var(--accent-cyan-light);">First Class Honors</span>
+          </div>
+          <div style="color: var(--text-muted); font-size: 0.85rem;">King Saud University • Riyadh, Saudi Arabia</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Command Palette Modal (Cmd+K) -->
+  <div class="modal-backdrop" id="cmd-k-modal" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-k-dialog">
+      <div class="cmd-k-input-wrapper">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="cmd-k-input" class="cmd-k-search-input" placeholder="Type a command or search section..." data-i18n-ph="cmd_k_ph" autocomplete="off">
+        <span class="kbd-badge" data-i18n="cmd_k_hint">ESC</span>
+      </div>
+      <div class="cmd-k-results" id="cmd-k-results">
+        <!-- Injected via command-palette.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/projects.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/command-palette.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
